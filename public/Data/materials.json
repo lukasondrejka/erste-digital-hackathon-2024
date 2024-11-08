@@ -1,0 +1,412 @@
+[
+  {
+    "name": "Aluminum",
+    "description": "A lightweight metal commonly used in beverage cans, foil, and some electronic components.",
+    "impact": "medium"
+  },
+  {
+    "name": "Glass",
+    "description": "Material used in bottles, jars, and some construction materials; can be recycled multiple times without losing quality.",
+    "impact": "low"
+  },
+  {
+    "name": "Plastic",
+    "description": "Polyethylene terephthalate, commonly used in single-use water bottles and food containers. Known for its high recyclability.",
+    "impact": "high"
+  },
+  {
+    "name": "Cardboard",
+    "description": "Paper-based material commonly used for packaging; biodegradable but often treated to increase durability.",
+    "impact": "medium"
+  },
+  {
+    "name": "Steel",
+    "description": "Durable metal used in construction, packaging, and appliances; can be recycled indefinitely.",
+    "impact": "low"
+  },
+  {
+    "name": "PVC Plastic",
+    "description": "Polyvinyl chloride, often used in pipes, medical equipment, and packaging; challenging to recycle and has high environmental impact.",
+    "impact": "high"
+  },
+  {
+    "name": "Textiles (Cotton)",
+    "description": "Natural fiber used in clothing and household items; biodegradable but requires substantial resources to produce.",
+    "impact": "medium"
+  },
+  {
+    "name": "Wood",
+    "description": "Biodegradable material used in furniture, construction, and packaging; can be composted if untreated.",
+    "impact": "low"
+  },
+  {
+    "name": "Polystyrene (Styrofoam)",
+    "description": "Lightweight plastic foam used in packaging and insulation; non-biodegradable and challenging to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Copper",
+    "description": "Conductive metal used in electrical wiring and plumbing; has a high recycling value.",
+    "impact": "medium"
+  },
+  {
+    "name": "Leather",
+    "description": "Material made from animal hides, used in clothing and accessories; biodegradable but has a high production impact.",
+    "impact": "high"
+  },
+  {
+    "name": "Concrete",
+    "description": "Common construction material made from cement, sand, and gravel; has a high carbon footprint during production.",
+    "impact": "high"
+  },
+  {
+    "name": "Bamboo",
+    "description": "Fast-growing natural resource used in furniture and flooring; renewable and biodegradable.",
+    "impact": "low"
+  },
+  {
+    "name": "Ceramics",
+    "description": "Durable material used in dishes, tiles, and pottery; not biodegradable but can last for a long time without degrading.",
+    "impact": "low"
+  },
+  {
+    "name": "Wool",
+    "description": "Natural fiber obtained from sheep, used in clothing and insulation; biodegradable but requires resources for animal care.",
+    "impact": "medium"
+  },
+  {
+    "name": "Acrylic (Synthetic Fiber)",
+    "description": "Synthetic fiber used in clothing and textiles; non-biodegradable and sheds microplastics during washing.",
+    "impact": "high"
+  },
+  {
+    "name": "Glass Fiber",
+    "description": "Reinforced glass used in insulation and industrial applications; not biodegradable and difficult to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Gypsum",
+    "description": "Mineral used in drywall and cement; can be recycled in construction, but not biodegradable.",
+    "impact": "medium"
+  },
+  {
+    "name": "Brass",
+    "description": "An alloy of copper and zinc used in plumbing, musical instruments, and hardware; recyclable and durable.",
+    "impact": "medium"
+  },
+  {
+    "name": "Paper",
+    "description": "Widely used for writing, printing, and packaging; biodegradable and recyclable but has environmental costs in production.",
+    "impact": "medium"
+  },
+  {
+    "name": "Silicon",
+    "description": "Material used in electronics and solar panels; recyclable but energy-intensive to produce.",
+    "impact": "high"
+  },
+  {
+    "name": "Carbon Fiber",
+    "description": "Lightweight, high-strength material used in aerospace and automotive industries; challenging to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Fiberglass",
+    "description": "Composite material used in insulation and construction; non-biodegradable and difficult to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Tin",
+    "description": "Metal used in coatings, soldering, and food containers; recyclable but limited availability.",
+    "impact": "medium"
+  },
+  {
+    "name": "Asphalt",
+    "description": "Petroleum-based material used in road construction; can be recycled but has a high environmental impact.",
+    "impact": "high"
+  },
+  {
+    "name": "Gold",
+    "description": "Precious metal used in jewelry, electronics, and coins; highly recyclable but mining has significant environmental impact.",
+    "impact": "high"
+  },
+  {
+    "name": "Nickel",
+    "description": "Metal used in batteries, coins, and stainless steel; recyclable but has an environmental impact in mining.",
+    "impact": "medium"
+  },
+  {
+    "name": "Linoleum",
+    "description": "Biodegradable flooring material made from natural materials like linseed oil; low impact but limited recyclability.",
+    "impact": "low"
+  },
+  {
+    "name": "Polypropylene",
+    "description": "Plastic used in packaging, automotive parts, and textiles; recyclable but non-biodegradable.",
+    "impact": "medium"
+  },
+  {
+    "name": "Neoprene",
+    "description": "Synthetic rubber used in wetsuits, medical braces, and electrical insulation; challenging to recycle and non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Polycarbonate",
+    "description": "Durable plastic used in eyewear, CDs, and electronics; non-biodegradable but recyclable under certain conditions.",
+    "impact": "high"
+  },
+  {
+    "name": "Silk",
+    "description": "Natural fiber produced by silkworms, used in textiles; biodegradable but production involves animal resources.",
+    "impact": "medium"
+  },
+  {
+    "name": "Titanium",
+    "description": "Lightweight, corrosion-resistant metal used in medical implants and aerospace; recyclable but energy-intensive to produce.",
+    "impact": "medium"
+  },
+  {
+    "name": "Burlap",
+    "description": "Natural fiber made from jute, used in sacks and crafts; biodegradable and low impact.",
+    "impact": "low"
+  },
+  {
+    "name": "Graphite",
+    "description": "Mineral used in pencils, batteries, and as a lubricant; recyclable but limited supply.",
+    "impact": "medium"
+  },
+  {
+    "name": "Foam Rubber",
+    "description": "Synthetic material used in mattresses and cushions; non-biodegradable and challenging to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Plywood",
+    "description": "Engineered wood product used in construction and furniture; biodegradable but may contain adhesives.",
+    "impact": "medium"
+  },
+  {
+    "name": "Lead",
+    "description": "Heavy metal used in batteries and radiation shielding; highly toxic and challenging to recycle safely.",
+    "impact": "high"
+  },
+  {
+    "name": "Polyester",
+    "description": "Synthetic fiber used in textiles; non-biodegradable and releases microplastics.",
+    "impact": "high"
+  },
+  {
+    "name": "Asbestos",
+    "description": "Mineral used for insulation; highly toxic and non-biodegradable, banned in many countries.",
+    "impact": "high"
+  },
+  {
+    "name": "Slate",
+    "description": "Natural stone used in roofing and flooring; durable and recyclable but resource-intensive to quarry.",
+    "impact": "medium"
+  },
+  {
+    "name": "Synthetic Rubber",
+    "description": "Material used in tires and various industrial products; non-biodegradable and challenging to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Cork",
+    "description": "Natural material harvested from cork oak trees, used in bottle stoppers and flooring; biodegradable and renewable.",
+    "impact": "low"
+  },
+  {
+    "name": "Sawdust",
+    "description": "Wood waste product often used in particleboard and as a fuel source; biodegradable and can be repurposed.",
+    "impact": "low"
+  },
+  {
+    "name": "Vermiculite",
+    "description": "Mineral used in insulation and horticulture; renewable but has environmental costs in mining.",
+    "impact": "medium"
+  },
+  {
+    "name": "Fiberglass Insulation",
+    "description": "Material used in building insulation; non-biodegradable and may release harmful fibers.",
+    "impact": "high"
+  },
+  {
+    "name": "Recycled Plastic (RPET)",
+    "description": "Plastic derived from recycled PET bottles; recyclable but still has environmental costs in processing.",
+    "impact": "medium"
+  },
+  {
+    "name": "Charcoal",
+    "description": "Carbon-rich material used as fuel and for filtration; renewable but can contribute to deforestation if unsustainably sourced.",
+    "impact": "medium"
+  },
+  {
+    "name": "Aluminum Foil",
+    "description": "Thin sheet of aluminum used in food packaging and insulation; recyclable but often discarded after single use.",
+    "impact": "medium"
+  },
+  {
+    "name": "Bioplastic",
+    "description": "Plastic alternative made from biological substances, such as corn starch; compostable in industrial facilities.",
+    "impact": "low"
+  },
+  {
+    "name": "Nylon",
+    "description": "Synthetic fiber used in textiles and engineering; non-biodegradable and produces microplastics.",
+    "impact": "high"
+  },
+  {
+    "name": "Melamine",
+    "description": "Hard plastic used in dishware and furniture; non-biodegradable and difficult to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Cast Iron",
+    "description": "Heavy metal used in cookware and construction; recyclable and long-lasting.",
+    "impact": "medium"
+  },
+  {
+    "name": "Organic Cotton",
+    "description": "Cotton grown without synthetic pesticides; biodegradable but still resource-intensive.",
+    "impact": "medium"
+  },
+  {
+    "name": "Recycled Paper",
+    "description": "Paper made from previously used paper products; biodegradable and reduces the need for new raw materials.",
+    "impact": "low"
+  },
+  {
+    "name": "Hydrogel",
+    "description": "Water-absorbent material used in medical and agricultural applications; biodegradable but has a limited lifespan.",
+    "impact": "medium"
+  },
+  {
+    "name": "Bakelite",
+    "description": "Early plastic used in electrical insulators and radios; non-biodegradable and challenging to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Synthetic Leather",
+    "description": "Plastic-based leather alternative; non-biodegradable but reduces demand for animal-based leather.",
+    "impact": "high"
+  },
+  {
+    "name": "Kevlar",
+    "description": "High-strength synthetic fiber used in protective gear and automotive parts; non-biodegradable and hard to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Galvanized Steel",
+    "description": "Steel coated with zinc to prevent corrosion; recyclable but resource-intensive to produce.",
+    "impact": "medium"
+  },
+  {
+    "name": "Recycled Glass",
+    "description": "Glass made from recycled glass products; infinitely recyclable and reduces need for new materials.",
+    "impact": "low"
+  },
+  {
+    "name": "Bamboo Fiber",
+    "description": "Natural fiber used in textiles and biodegradable plastics; renewable but requires chemicals for processing.",
+    "impact": "medium"
+  },
+  {
+    "name": "Laminated Wood",
+    "description": "Engineered wood product used in construction; biodegradable but may contain adhesives.",
+    "impact": "medium"
+  },
+  {
+    "name": "Polyethylene Terephthalate (PET)",
+    "description": "Common plastic used in bottles and packaging; recyclable but often ends up in landfills.",
+    "impact": "high"
+  },
+  {
+    "name": "Wool Felt",
+    "description": "Compressed wool used in crafts and insulation; biodegradable and renewable.",
+    "impact": "low"
+  },
+  {
+    "name": "Beryllium",
+    "description": "Lightweight metal used in aerospace and electronics; toxic if inhaled and difficult to recycle.",
+    "impact": "high"
+  },
+  {
+    "name": "Ceramic Tile",
+    "description": "Durable material used in flooring and walls; non-biodegradable but recyclable in some cases.",
+    "impact": "medium"
+  },
+  {
+    "name": "Thermoplastic Polyurethane (TPU)",
+    "description": "Flexible plastic used in footwear and electronics cases; recyclable but non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Biodegradable Packing Peanuts",
+    "description": "Packing material made from cornstarch; dissolves in water and compostable.",
+    "impact": "low"
+  },
+  {
+    "name": "Graphene",
+    "description": "Material with high electrical conductivity used in electronics and nanotechnology; recyclable but difficult to produce sustainably.",
+    "impact": "medium"
+  },
+  {
+    "name": "Pressed Wood",
+    "description": "Wood product made from compressed wood particles, often used in furniture; biodegradable but may contain adhesives.",
+    "impact": "medium"
+  },
+  {
+    "name": "Titanium Alloy",
+    "description": "High-strength metal alloy used in aerospace and medical implants; recyclable but resource-intensive.",
+    "impact": "medium"
+  },
+  {
+    "name": "Recycled Cotton",
+    "description": "Textile fiber made from reused cotton; biodegradable and reduces need for new raw cotton.",
+    "impact": "low"
+  },
+  {
+    "name": "Zinc Alloy",
+    "description": "Metal alloy often used in automotive and construction parts; recyclable but mining can be harmful.",
+    "impact": "medium"
+  },
+  {
+    "name": "Bee Wax",
+    "description": "Natural wax produced by bees, used in candles and cosmetics; renewable and biodegradable.",
+    "impact": "low"
+  },
+  {
+    "name": "Bamboo Charcoal",
+    "description": "Processed bamboo used in air and water purification; renewable but energy-intensive to produce.",
+    "impact": "medium"
+  },
+  {
+    "name": "Sisal Fiber",
+    "description": "Natural fiber used in ropes and textiles; biodegradable and renewable.",
+    "impact": "low"
+  },
+  {
+    "name": "Polypropylene (PP)",
+    "description": "Durable plastic used for the seat and backrest; lightweight, resistant to impact, and non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Foam Padding",
+    "description": "Padding material used in the seat for comfort; typically made of polyurethane, which is non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Polyester Fabric",
+    "description": "Synthetic fabric covering the seat and backrest; durable and easy to clean but non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Nylon Screws",
+    "description": "Plastic fasteners used in some parts of the chair; strong and resistant to wear, but non-biodegradable.",
+    "impact": "high"
+  },
+  {
+    "name": "Powder Coating",
+    "description": "Protective finish applied to the steel frame; adds durability and corrosion resistance, with minimal environmental impact.",
+    "impact": "low"
+  }
+]
