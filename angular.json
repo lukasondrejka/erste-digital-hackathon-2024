@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hackaton": {
+    "hackathon": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hackaton",
+            "outputPath": "dist/hackathon",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hackaton:build:production"
+              "buildTarget": "hackathon:build:production"
             },
             "development": {
-              "buildTarget": "hackaton:build:development"
+              "buildTarget": "hackathon:build:development"
             }
           },
           "defaultConfiguration": "development"
