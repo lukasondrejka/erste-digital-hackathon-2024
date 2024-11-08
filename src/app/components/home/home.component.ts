@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { MistralaiService } from "../../services/mistralai.service";
+import { JsonDataServiceService } from "../../services/json-data-service.service";
+import { Material } from "../../models/material";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -10,18 +13,18 @@ import { MistralaiService } from "../../services/mistralai.service";
 })
 export class HomeComponent {
   chatResponse: string = '';
+  materials: Array<Material> = [];
 
   constructor(
-    private mistrallaiService: MistralaiService,
+    private router: Router,
   ) {}
 
-  async sendMessage(message: string) {
-    const response =
-      await this.mistrallaiService.sendMessage(message);
-    this.chatResponse = <string>response;
-  }
 
-  async onSendMessage(message: string) {
-    await this.sendMessage(message);
+  viewItemOverview(searchInput: string) {
+    if (!searchInput) {
+      return;
+    }
+
+    this.router.navigate(['/item', searchInput]);
   }
 }

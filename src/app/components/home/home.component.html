@@ -17,21 +17,19 @@
 
   <!-- Describe object block -->
   <div class="textBlock">
-   <!-- <div class="leftAlign">-->
       <label class ="description" for="object-description">
         Describe object
       </label>
-<!--    </div>-->
     <input
       id="object-description"
       class="text-input"
       type="text"
       #searchInput
-      placeholder="  Old sunflower oil..."
+      placeholder="Old sunflower oil..."
     />
 
-    <button class="intro-button" (click)="onSendMessage(searchInput.value)">
-      Enter description
+    <button class="intro-button" (click)="viewItemOverview(searchInput.value)">
+      Enter
     </button>
   </div>
 
