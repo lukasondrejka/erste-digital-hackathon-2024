@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Mistral } from "@mistralai/mistralai";
-import {ChatCompletionResponse} from "@mistralai/mistralai/models/components";
+import { ChatCompletionResponse } from "@mistralai/mistralai/models/components";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MistralaiService {
   private apiKey: string = 'Kd7LHVHCXMZHRuxcjQgz72F7UJikpo2W';
+  private client: Mistral;
 
-  constructor(
-    private client = new Mistral({apiKey: this.apiKey}),
-  ) { }
+  constructor() {
+    this.client = new Mistral({apiKey: this.apiKey});
+  }
 
-  async sendMessage(message: string) {
+  async sendMessage(message: string): Promise<string> {
     const chatResponse: ChatCompletionResponse = await this.client.chat.complete({
       model: 'mistral-large-latest',
       messages: [
@@ -20,6 +21,6 @@ export class MistralaiService {
       ],
     });
 
-    return chatResponse.choices![0].message.content;
+    return <string>chatResponse.choices?.[0]?.message?.content ?? '';
   }
 }

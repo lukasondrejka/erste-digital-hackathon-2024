@@ -1,4 +1,36 @@
-<div class="button-container">
-  <button class="intro-button">Text</button>
-  <button class="intro-button">Photo</button>
+<div class="page">
+  <div class="header">
+    <h1>How to declutter?</h1>
+    <p>...........</p>
+  </div>
+
+  <!-- Upload photo block -->
+  <div class="block">
+    <!-- TODO: Photo icon -->
+
+    <button class="intro-button">Upload photo</button>
+  </div>
+
+  <!-- Or -->
+  <p>or</p>
+
+  <!-- Describe object block -->
+  <div class="block">
+    <label for="object-description">
+      Describe object
+    </label>
+    <input
+      id="object-description"
+      class="text-input"
+      type="text"
+      #searchInput
+      placeholder="Enter your message"
+    />
+
+    <button class="intro-button" (click)="onSendMessage(searchInput.value)">
+      Enter
+    </button>
+  </div>
+
+  <p>{{ chatResponse }}</p>
 </div>

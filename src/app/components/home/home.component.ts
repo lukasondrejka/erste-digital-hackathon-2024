@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
+import { MistralaiService } from "../../services/mistralai.service";
 
 @Component({
   selector: 'app-home',
@@ -9,5 +9,19 @@ import {Router} from "@angular/router";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
+  chatResponse: string = '';
+
+  constructor(
+    private mistrallaiService: MistralaiService,
+  ) {}
+
+  async sendMessage(message: string) {
+    const response =
+      await this.mistrallaiService.sendMessage(message);
+    this.chatResponse = <string>response;
+  }
+
+  async onSendMessage(message: string) {
+    await this.sendMessage(message);
+  }
 }
