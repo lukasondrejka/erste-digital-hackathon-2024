@@ -1,15 +1,15 @@
 <div class="page">
   <div class="header">
     <h1>How to declutter?</h1>
-    <p style="font-size: 25px">Nahraj foto a najdi najblizsie recyklacne miesto</p>
+    <p style="font-size: 25px">Enter a photo or description to find out!</p>
   </div>
 
   <!-- Upload assets block -->
   <div class="photoBlock">
     <div class="input">
-      <img class="image" src="Upload.svg" alt="Phone with app screenshot">
+      <img class="image" src="Camera.svg" alt="Phone with app screenshot">
     </div>
-      <button class="intro-button">Upload photo</button>
+      <button class="intro-button">Enter photo</button>
   </div>
 
   <!-- Or -->
@@ -17,21 +17,21 @@
 
   <!-- Describe object block -->
   <div class="textBlock">
-    <!--<div class="leftAlign">-->
+   <!-- <div class="leftAlign">-->
       <label class ="description" for="object-description">
         Describe object
       </label>
-   <!-- </div>-->
+<!--    </div>-->
     <input
       id="object-description"
       class="text-input"
       type="text"
       #searchInput
-      placeholder="Old sunflower oil..."
+      placeholder="  Old sunflower oil..."
     />
 
     <button class="intro-button" (click)="onSendMessage(searchInput.value)">
-      Enter
+      Enter description
     </button>
   </div>
 
