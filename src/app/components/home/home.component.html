@@ -1,30 +1,33 @@
 <div class="page">
   <div class="header">
     <h1>How to declutter?</h1>
-    <p>...........</p>
+    <p style="font-size: 25px">Nahraj foto a najdi najblizsie recyklacne miesto</p>
   </div>
 
-  <!-- Upload photo block -->
-  <div class="block">
-    <!-- TODO: Photo icon -->
-
-    <button class="intro-button">Upload photo</button>
+  <!-- Upload assets block -->
+  <div class="photoBlock">
+    <div class="input">
+      <img class="image" src="Upload.svg" alt="Phone with app screenshot">
+    </div>
+      <button class="intro-button">Upload photo</button>
   </div>
 
   <!-- Or -->
-  <p>or</p>
+  <p class="or">or</p>
 
   <!-- Describe object block -->
-  <div class="block">
-    <label for="object-description">
-      Describe object
-    </label>
+  <div class="textBlock">
+    <!--<div class="leftAlign">-->
+      <label class ="description" for="object-description">
+        Describe object
+      </label>
+   <!-- </div>-->
     <input
       id="object-description"
       class="text-input"
       type="text"
       #searchInput
-      placeholder="Enter your message"
+      placeholder="Old sunflower oil..."
     />
 
     <button class="intro-button" (click)="onSendMessage(searchInput.value)">
