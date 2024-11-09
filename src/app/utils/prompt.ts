@@ -1,4 +1,4 @@
-import {Material} from "../models/material";
+import { Material } from "../models/material";
 
 function generatePrompt(itemName: string, availableMaterials: Array<Material>): string {
   const materials = availableMaterials.map(material => material.name).join(', ');

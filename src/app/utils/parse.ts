@@ -1,12 +1,7 @@
-import {Item} from "../models/item";
-import {Material} from "../models/material";
-
-// Expected response format:
-// { materials: string[], reuse: string[], recycle: string[], valuable: boolean }
+import { Item } from "../models/item";
+import { Material } from "../models/material";
 
 function parseResponse(response: string, name: string, availableMaterials: Material[]): Item | null {
-  const materials = availableMaterials.map(material => material.name);
-
   // Remove all characters before the first '{' and after the last '}'
   const formatedResponse = response.replace(/.*?({.*}).*/s, '$1');
 

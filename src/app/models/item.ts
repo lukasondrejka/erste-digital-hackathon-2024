@@ -1,4 +1,4 @@
-import {Material} from "./material";
+import { Material } from "./material";
 
 interface Item {
   name: string,

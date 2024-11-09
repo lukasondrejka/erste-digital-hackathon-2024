@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Mistral } from "@mistralai/mistralai";
 import { ChatCompletionResponse } from "@mistralai/mistralai/models/components";
-import {Observable} from "rxjs";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class MistralaiService {
       this.client.chat.complete({
         model: 'mistral-large-latest',
         messages: [
-          {role: 'user', content: message}
+          { role: 'user', content: message }
         ],
       }).then((chatResponse: ChatCompletionResponse) => {
         const response = <string>chatResponse.choices?.[0]?.message?.content ?? '';
