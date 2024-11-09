@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { MistralaiService } from "../../services/mistralai.service";
-import { JsonDataServiceService } from "../../services/json-data-service.service";
-import { Material } from "../../models/material";
 import {Router} from "@angular/router";
 
 @Component({
@@ -12,9 +9,6 @@ import {Router} from "@angular/router";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  chatResponse: string = '';
-  materials: Array<Material> = [];
-
   constructor(
     private router: Router,
   ) {}
