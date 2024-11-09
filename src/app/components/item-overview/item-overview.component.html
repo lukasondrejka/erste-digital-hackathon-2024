@@ -1,25 +1,56 @@
 @if (isLoading) {
-  loading...
+  <div class="loading">
+    <div class="loader"></div>
+  </div>
 } @else {
   <div class="page">
     <div class="header">
-      <h1>How to declutter:</h1>
-      <p class="tiem-name">{{ itemName }}</p>
+      <h1>{{ item.name }}</h1>
     </div>
 
     <!-- Upload photo block -->
-    <div class="grid">
-
+    <div class="grid-container">
+        @for (material of item.materials; track material) {
+          <div class="grid-item" [class.active]="materialDescription === material.description" (click)="selectMaterial(material.name)">
+            <div class="material">
+              <img src="{{ material.impact }}.svg" alt="{{ material.name }}">
+              <h2>{{ material.name }}</h2>
+            </div>
+          </div>
+        }
     </div>
 
     <!-- Describe object block -->
     <div class="block">
-      <h2 class="material-name">
-
-      </h2>
+      <h3 class="material-name">
+        Material overview
+      </h3>
       <p>
-        {{ response }}
+        {{ materialDescription }}
       </p>
+
+        @if (item.reuse.length > 0) {
+          <h3>
+            Reuse
+          </h3>
+          <ul>
+            @for (reuseItem of item.reuse; track reuseItem) {
+              <li>{{ reuseItem }}</li>
+            }
+          </ul>
+        }
+
+        @if (item.recycle.length > 0) {
+          <h3>
+            Dispose
+          </h3>
+          <ul>
+            @for (disposeItem of item.recycle; track disposeItem) {
+              <li>{{ disposeItem }}</li>
+            }
+          </ul>
+        }
+
     </div>
   </div>
 }
