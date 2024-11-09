@@ -4,12 +4,12 @@
   </div>
 } @else if (item) {
   <div class="page">
-    <div style="height: 84px">
+    <div style="height: 84px" (click)="router.navigate(['/'])">
       <p style="font-size: 24px; text-align: center">Tidify</p>
     </div>
 
     <div class="header">
-      <h1>{{ item.name }}</h1>
+      <h1>{{ item.name | titlecase }}</h1>
     </div>
 
     <div class="grid-container">
@@ -23,9 +23,17 @@
         }
     </div>
 
+    @if (item.valuable) {
+      <div class="valuable-block">
+        <h3>
+          Potentially valuable item
+        </h3>
+      </div>
+    }
+
     <div class="block">
         @if (materialDescription) {
-            <h3 class="material-name">
+            <h3>
                 Material overview
             </h3>
             <p>
@@ -39,7 +47,7 @@
           </h3>
           <ul>
             @for (reuseItem of item.reuse; track reuseItem) {
-              <li>{{ reuseItem }}</li>
+              <li>{{ reuseItem | titlecase }}</li>
             }
           </ul>
         }
@@ -50,7 +58,7 @@
           </h3>
           <ul>
             @for (disposeItem of item.recycle; track disposeItem) {
-              <li>{{ disposeItem }}</li>
+              <li>{{ disposeItem | titlecase}}</li>
             }
           </ul>
         }

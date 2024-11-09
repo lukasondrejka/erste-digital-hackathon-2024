@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Material } from "../../models/material";
 import { MistralaiService } from "../../services/mistralai.service";
 import { JsonDataServiceService } from "../../services/json-data-service.service";
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { generatePrompt } from "../../utils/prompt";
 import {Item} from "../../models/item";
 import {parseResponse} from "../../utils/parse";
+import {TitleCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-item-overview',
   standalone: true,
-  imports: [],
+  imports: [
+    TitleCasePipe
+  ],
   templateUrl: './item-overview.component.html',
   styleUrl: './item-overview.component.scss'
 })
@@ -26,6 +29,7 @@ export class ItemOverviewComponent implements OnInit {
     private mistrallaiService: MistralaiService,
     private jsonDataService: JsonDataServiceService,
     private route: ActivatedRoute,
+    public router: Router,
   ) { }
 
   async ngOnInit() {
