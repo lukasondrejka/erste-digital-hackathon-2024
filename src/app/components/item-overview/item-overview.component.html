@@ -2,13 +2,12 @@
   <div class="loading">
     <div class="loader"></div>
   </div>
-} @else {
+} @else if (item) {
   <div class="page">
     <div class="header">
       <h1>{{ item.name }}</h1>
     </div>
 
-    <!-- Upload photo block -->
     <div class="grid-container">
         @for (material of item.materials; track material) {
           <div class="grid-item" [class.active]="materialDescription === material.description" (click)="selectMaterial(material.name)">
@@ -20,7 +19,6 @@
         }
     </div>
 
-    <!-- Describe object block -->
     <div class="block">
         @if (materialDescription) {
             <h3 class="material-name">
@@ -52,7 +50,6 @@
             }
           </ul>
         }
-
     </div>
   </div>
 }

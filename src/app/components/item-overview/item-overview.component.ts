@@ -5,6 +5,7 @@ import { JsonDataServiceService } from "../../services/json-data-service.service
 import { ActivatedRoute } from '@angular/router';
 import { generatePrompt } from "../../utils/prompt";
 import {Item} from "../../models/item";
+import {parseResponse} from "../../utils/parse";
 
 @Component({
   selector: 'app-item-overview',
@@ -33,52 +34,27 @@ export class ItemOverviewComponent implements OnInit {
     this.route.params.subscribe(async params => {
       this.itemName = params['itemName'];
 
-      this.item = {
-        name: 'bicycle',
-        materials: [
-          {
-            name: 'metal',
-            description: 'Metal is a material that is used in many items.',
-            impact: 'low',
-          },
-          {
-            name: 'rubber',
-            description: 'Rubber is a material that is used in many items.',
-            impact: 'medium',
-          },
-          {
-            name: 'plastic',
-            description: 'Plastic is a material that is used in many items.',
-            impact: 'high',
-          },
-          {
-            name: 'glass',
-            description: 'glass is a material that is used in many items.',
-            impact: 'high',
-          },
-        ],
-        reuse: ['reuse center'],
-        recycle: ['recycling center', 'landfill'],
-        valuable: true,
-      }
-      this.isLoading = false;
+      this.jsonDataService.getJsonData<Array<Material>>('data/materials.json').subscribe(materials => {
+        this.materials = <Array<Material>>materials;
 
-      // TODO: Implement loading data from JSON files and sending a message to MistralAI
-      // try {
-      //   const materials =
-      //     await this.jsonDataService.getJsonData<Array<Material>>('data/materials.json').toPromise();
-      //   this.materials = <Array<Material>>materials;
-      //
-      //   this.response = await this.mistrallaiService.sendMessage(generatePrompt(this.itemName));
-      // } catch (error) {
-      //   console.error('Error loading data', error);
-      // } finally {
-      //   this.isLoading = false;
-      // }
+          this.mistrallaiService.sendMessage(generatePrompt(this.itemName, this.materials)).subscribe(response => {
+            this.response = response;
 
-      if (this.materials.length > 0) {
-        this.materialDescription = this.item.materials[0].description;
-      }
+            this.item = parseResponse(response, this.itemName, this.materials) || {
+              name: this.itemName,
+              materials: [],
+              reuse: [],
+              recycle: [],
+              valuable: false,
+            };
+
+            if (this.item.materials.length > 0) {
+              this.selectMaterial(this.item.materials[0].name);
+            }
+
+            this.isLoading = false;
+          });
+      });
     });
   }
 

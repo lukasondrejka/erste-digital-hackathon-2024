@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Mistral } from "@mistralai/mistralai";
 import { ChatCompletionResponse } from "@mistralai/mistralai/models/components";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +14,20 @@ export class MistralaiService {
     this.client = new Mistral({apiKey: this.apiKey});
   }
 
-  async sendMessage(message: string): Promise<string> {
-    const chatResponse: ChatCompletionResponse = await this.client.chat.complete({
-      model: 'mistral-large-latest',
-      messages: [
-        { role: 'user', content: message }
-      ],
+  sendMessage(message: string): Observable<string> {
+    return new Observable<string>(observer => {
+      this.client.chat.complete({
+        model: 'mistral-large-latest',
+        messages: [
+          {role: 'user', content: message}
+        ],
+      }).then((chatResponse: ChatCompletionResponse) => {
+        const response = <string>chatResponse.choices?.[0]?.message?.content ?? '';
+        observer.next(response);
+        observer.complete();
+      }).catch(error => {
+        observer.error(error);
+      });
     });
-
-    return <string>chatResponse.choices?.[0]?.message?.content ?? '';
   }
 }
