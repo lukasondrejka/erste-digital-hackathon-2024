@@ -22,12 +22,14 @@
 
     <!-- Describe object block -->
     <div class="block">
-      <h3 class="material-name">
-        Material overview
-      </h3>
-      <p>
-        {{ materialDescription }}
-      </p>
+        @if (materialDescription) {
+            <h3 class="material-name">
+                Material overview
+            </h3>
+            <p>
+                {{ materialDescription }}
+            </p>
+        }
 
         @if (item.reuse.length > 0) {
           <h3>
