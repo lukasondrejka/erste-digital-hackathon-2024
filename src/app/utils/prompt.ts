@@ -16,6 +16,8 @@ Examples:
 Input: mobile phone
 Output: { "materials": ['metal', 'plastic', 'glass'], "reuse": ['reuse center'], "recycle": ['recycling center', 'landfill'], "valuable": true }
 
+Dont write more then 6 materials for input item!!! <- very important
+Use only relevant materials if there input wood table then use wood as first material then second most used and so on. Dont use materials then unlikely will be in this item. Better dont use nothing then bad material.
 Input: ${itemName}
 Output:
   `;

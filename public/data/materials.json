@@ -25,11 +25,6 @@
     "impact": "low"
   },
   {
-    "name": "PVC Plastic",
-    "description": "Polyvinyl chloride, often used in pipes, medical equipment, and packaging; challenging to recycle and has high environmental impact.",
-    "impact": "high"
-  },
-  {
     "name": "Textiles (Cotton)",
     "description": "Natural fiber used in clothing and household items; biodegradable but requires substantial resources to produce.",
     "impact": "medium"
@@ -38,11 +33,6 @@
     "name": "Wood",
     "description": "Biodegradable material used in furniture, construction, and packaging; can be composted if untreated.",
     "impact": "low"
-  },
-  {
-    "name": "Polystyrene (Styrofoam)",
-    "description": "Lightweight plastic foam used in packaging and insulation; non-biodegradable and challenging to recycle.",
-    "impact": "high"
   },
   {
     "name": "Copper",
@@ -75,11 +65,6 @@
     "impact": "medium"
   },
   {
-    "name": "Acrylic (Synthetic Fiber)",
-    "description": "Synthetic fiber used in clothing and textiles; non-biodegradable and sheds microplastics during washing.",
-    "impact": "high"
-  },
-  {
     "name": "Glass Fiber",
     "description": "Reinforced glass used in insulation and industrial applications; not biodegradable and difficult to recycle.",
     "impact": "high"
@@ -100,18 +85,8 @@
     "impact": "medium"
   },
   {
-    "name": "Silicon",
-    "description": "Material used in electronics and solar panels; recyclable but energy-intensive to produce.",
-    "impact": "high"
-  },
-  {
     "name": "Carbon Fiber",
     "description": "Lightweight, high-strength material used in aerospace and automotive industries; challenging to recycle.",
-    "impact": "high"
-  },
-  {
-    "name": "Fiberglass",
-    "description": "Composite material used in insulation and construction; non-biodegradable and difficult to recycle.",
     "impact": "high"
   },
   {
@@ -275,16 +250,6 @@
     "impact": "low"
   },
   {
-    "name": "Hydrogel",
-    "description": "Water-absorbent material used in medical and agricultural applications; biodegradable but has a limited lifespan.",
-    "impact": "medium"
-  },
-  {
-    "name": "Bakelite",
-    "description": "Early plastic used in electrical insulators and radios; non-biodegradable and challenging to recycle.",
-    "impact": "high"
-  },
-  {
     "name": "Synthetic Leather",
     "description": "Plastic-based leather alternative; non-biodegradable but reduces demand for animal-based leather.",
     "impact": "high"
@@ -315,11 +280,6 @@
     "impact": "medium"
   },
   {
-    "name": "Polyethylene Terephthalate (PET)",
-    "description": "Common plastic used in bottles and packaging; recyclable but often ends up in landfills.",
-    "impact": "high"
-  },
-  {
     "name": "Wool Felt",
     "description": "Compressed wool used in crafts and insulation; biodegradable and renewable.",
     "impact": "low"
@@ -333,11 +293,6 @@
     "name": "Ceramic Tile",
     "description": "Durable material used in flooring and walls; non-biodegradable but recyclable in some cases.",
     "impact": "medium"
-  },
-  {
-    "name": "Thermoplastic Polyurethane (TPU)",
-    "description": "Flexible plastic used in footwear and electronics cases; recyclable but non-biodegradable.",
-    "impact": "high"
   },
   {
     "name": "Biodegradable Packing Peanuts",
@@ -375,28 +330,13 @@
     "impact": "low"
   },
   {
-    "name": "Bamboo Charcoal",
-    "description": "Processed bamboo used in air and water purification; renewable but energy-intensive to produce.",
-    "impact": "medium"
-  },
-  {
     "name": "Sisal Fiber",
     "description": "Natural fiber used in ropes and textiles; biodegradable and renewable.",
     "impact": "low"
   },
   {
-    "name": "Polypropylene (PP)",
-    "description": "Durable plastic used for the seat and backrest; lightweight, resistant to impact, and non-biodegradable.",
-    "impact": "high"
-  },
-  {
     "name": "Foam Padding",
     "description": "Padding material used in the seat for comfort; typically made of polyurethane, which is non-biodegradable.",
-    "impact": "high"
-  },
-  {
-    "name": "Polyester Fabric",
-    "description": "Synthetic fabric covering the seat and backrest; durable and easy to clean but non-biodegradable.",
     "impact": "high"
   },
   {
@@ -407,6 +347,11 @@
   {
     "name": "Powder Coating",
     "description": "Protective finish applied to the steel frame; adds durability and corrosion resistance, with minimal environmental impact.",
+    "impact": "low"
+  },
+  {
+    "name": "Sunflower",
+    "description": "The common sunflower is harvested for its edible oily seeds, which are often eaten as a snack food. They are also used in the production of cooking oil, as food for livestock, as bird food, and as a plantings in domestic gardens for aesthetics.",
     "impact": "low"
   }
 ]
