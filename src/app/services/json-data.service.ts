@@ -5,12 +5,12 @@ import { Observable } from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class JsonDataServiceService {
+export class JsonDataService {
   constructor(
     private httpClient: HttpClient
   ) {}
 
-  public getJsonData<T>(url: string): Observable<T> {
-    return this.httpClient.get<T>(url);
+  public getJsonData<T>(jsonFileName: string): Observable<T> {
+    return this.httpClient.get<T>(`data/${jsonFileName}.json`);
   }
 }

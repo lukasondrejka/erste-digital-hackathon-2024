@@ -8,6 +8,9 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'item/:itemName', component: ItemOverviewComponent },
+
+  // Otherwise redirect to home
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({

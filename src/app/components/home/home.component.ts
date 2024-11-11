@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
+import { NavbarComponent } from "../shared/navbar/navbar.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    NavbarComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   constructor(
-    public router: Router,
+    private router: Router,
   ) {}
 
-
-  viewItemOverview(searchInput: string) {
+  navigateItemOverview(searchInput: string) {
     if (!searchInput) {
       return;
     }

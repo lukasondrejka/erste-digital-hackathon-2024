@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Mistral } from "@mistralai/mistralai";
 import { ChatCompletionResponse } from "@mistralai/mistralai/models/components";
 import { Observable } from "rxjs";
+import { environment } from "../../environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MistralaiService {
-  private apiKey: string = 'Kd7LHVHCXMZHRuxcjQgz72F7UJikpo2W';
+  private apiKey: string = environment.mistralaiApiKey;
   private client: Mistral;
 
   constructor() {

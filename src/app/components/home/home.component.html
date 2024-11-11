@@ -1,37 +1,41 @@
-<div class="page">
-  <div style="height: 84px" (click)="router.navigate(['/'])">
-    <p style="font-size: 24px; text-align: center">Tidify</p>
-  </div>
+<div class="container">
+  <app-navbar></app-navbar>
 
   <div class="header">
-    <h1>How to declutter?</h1>
-    <p>Enter a photo or description to find out!</p>
+    <h1>
+      How to declutter?
+    </h1>
+    <p>
+      Enter a photo or description to find out!
+    </p>
   </div>
 
-  <div class="photo-block">
+  <div class="block photo-block">
     <div class="input">
-      <img class="image" src="camera.svg" alt="">
+      <img class="image" src="icons/camera.svg" alt="Camera">
     </div>
-      <button class="intro-button">Photo</button>
+      <button class="button">
+        Photo
+      </button>
   </div>
 
   <p class="or">
     or
   </p>
 
-  <div class="text-block">
+  <div class="block text-block">
     <label class ="description" for="object-description">
       Describe object
     </label>
     <input
+      #searchInput
       id="object-description"
       class="text-input"
       type="text"
-      #searchInput
       placeholder="Old sunflower oil..."
     />
 
-    <button class="intro-button" (click)="viewItemOverview(searchInput.value)">
+    <button class="button" (click)="navigateItemOverview(searchInput.value)">
       Enter
     </button>
   </div>
