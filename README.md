@@ -12,9 +12,13 @@ AI tools were used during project development.
 
 **PowerPoint Presentation:** [Tidify.pptx](Tidify.pptx)
 
-> *Note: This project includes post-hackathon improvements such as refactoring and documentation.*
+**Note:** This project includes post-hackathon improvements such as refactoring and documentation.
 
----
+## Screenshots
+
+![iPhone_-_Home](https://github.com/user-attachments/assets/02202717-e568-4b19-b898-bb2b66915ce1)
+&nbsp;
+![iPhone_-_Item](https://github.com/user-attachments/assets/e4915e48-7beb-43f7-9770-d7cfa6d5249c)
 
 ## Development Setup
 
@@ -35,8 +39,6 @@ AI tools were used during project development.
    ```bash
    npm start
    ```
-
----
 
 ## Resources
 
