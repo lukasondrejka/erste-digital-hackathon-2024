@@ -2,11 +2,12 @@
 
 -- **tidy up and simplify**
 
-**[Erste Digital Hackathon](https://www.erstedigital.com/sk/hackathon) Winning Project**
+**Erste Digital Hackathon 2024 Winning Project** ([website](https://www.erstedigital.com/sk/hackathon))
 
-Tidify is a mobile-first, AI-powered web application that helps you responsibly get rid of clutter. 
-Users can specify an item, and the app identifies its potential materials and highlights their impact. 
-Tidify also suggests ways to reuse or properly dispose of items, making decluttering easier and more environmentally friendly.
+Tidify is an AI-powered application designed to help you declutter responsibly.
+By identifying the materials of items and highlighting their environmental impact, Tidify suggests sustainable ways to reuse or dispose of them.
+This makes the decluttering process simpler and more eco-friendly.
+App uses [Mistral AI](https://mistral.ai/en).
 
 AI tools were used during project development.
 
@@ -17,7 +18,7 @@ AI tools were used during project development.
 ## Screenshots
 
 ![iPhone_-_Home](https://github.com/user-attachments/assets/02202717-e568-4b19-b898-bb2b66915ce1)
-&nbsp;
+&nbsp;&nbsp;
 ![iPhone_-_Item](https://github.com/user-attachments/assets/e4915e48-7beb-43f7-9770-d7cfa6d5249c)
 
 ## Development Setup

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleCasePipe } from "@angular/common";
 import { ActivatedRoute } from '@angular/router';
-import { Material } from "../../models/material";
 import { Item } from "../../models/item";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { ItemOverviewService } from "../../services/item-overview.service";
@@ -19,7 +18,6 @@ import { ItemOverviewService } from "../../services/item-overview.service";
 export class ItemOverviewComponent implements OnInit {
   isLoading: boolean = false;
   itemName: string = '';
-  materials: Array<Material> = [];
   item: Item | null = null;
   materialDescription: string = '';
 

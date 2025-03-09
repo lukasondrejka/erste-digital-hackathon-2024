@@ -5,12 +5,9 @@ import { ItemOverviewComponent } from "./components/item-overview/item-overview.
 import { CommonModule } from "@angular/common";
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'item/:itemName', component: ItemOverviewComponent },
-
-  // Otherwise redirect to home
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
