@@ -1,66 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { Material } from "../../models/material";
-import { MistralaiService } from "../../services/mistralai.service";
-import { JsonDataServiceService } from "../../services/json-data-service.service";
-import { ActivatedRoute, Router } from '@angular/router';
-import { generatePrompt } from "../../utils/prompt";
-import { Item } from "../../models/item";
-import { parseResponse } from "../../utils/parse";
-import { TitleCasePipe } from "@angular/common";
+import { Component, computed, inject, input, linkedSignal } from '@angular/core';
+import { TitleCasePipe } from '@angular/common';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { Material } from '../../models/material';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { ItemOverviewService } from '../../services/item-overview.service';
 
 @Component({
   selector: 'app-item-overview',
-  standalone: true,
   imports: [
-    TitleCasePipe
+    TitleCasePipe,
+    NavbarComponent,
   ],
   templateUrl: './item-overview.component.html',
-  styleUrl: './item-overview.component.scss'
+  styleUrl: './item-overview.component.scss',
 })
-export class ItemOverviewComponent implements OnInit {
-  isLoading: boolean = true;
-  materials: Array<Material> = [];
-  itemName: string = '';
-  response: string = '';
-  item: Item | null = null;
-  materialDescription: string = '';
+export class ItemOverviewComponent {
+  private readonly itemOverviewService = inject(ItemOverviewService);
 
-  constructor(
-    private mistrallaiService: MistralaiService,
-    private jsonDataService: JsonDataServiceService,
-    private route: ActivatedRoute,
-    public router: Router,
-  ) { }
+  // Bound from the ':itemName' route param (withComponentInputBinding)
+  public readonly itemName = input.required<string>();
 
-  async ngOnInit() {
-    this.isLoading = true;
+  // Reloads automatically when itemName changes, previous request is cancelled
+  protected readonly itemResource = rxResource({
+    params: () => this.itemName(),
+    stream: ({ params: itemName }) => this.itemOverviewService.getItemOverview(itemName),
+  });
 
-    this.route.params.subscribe(async params => {
-      this.itemName = params['itemName'];
+  protected readonly item = computed(() => this.itemResource.hasValue() ? this.itemResource.value() : null);
 
-      this.jsonDataService.getJsonData<Array<Material>>('data/materials.json').subscribe(materials => {
-        this.materials = <Array<Material>>materials;
+  // Defaults to the first material whenever a new item is loaded, user can override it
+  protected readonly selectedMaterial = linkedSignal<Material | null>(() => this.item()?.materials[0] ?? null);
 
-          this.mistrallaiService.sendMessage(generatePrompt(this.itemName, this.materials)).subscribe(response => {
-            this.response = response;
-            this.item = parseResponse(response, this.itemName, this.materials) || null;
-
-            if (this.item && this.item.materials.length > 0) {
-              this.selectMaterial(this.item.materials[0].name);
-            }
-
-            this.isLoading = false;
-          });
-      });
-    });
-  }
-
-  selectMaterial(materialName: string) {
-    if (!this.item) {
-      return;
-    }
-
-    this.materialDescription = this.item.materials.find(material =>
-      material.name === materialName)?.description || '';
+  protected selectMaterial(material: Material): void {
+    this.selectedMaterial.set(material);
   }
 }

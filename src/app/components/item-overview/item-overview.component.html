@@ -1,26 +1,32 @@
-@if (isLoading) {
-  <div class="loading">
-    <div class="loader"></div>
-  </div>
-} @else if (item) {
-  <div class="page">
-    <div style="height: 84px" (click)="router.navigate(['/'])">
-      <p style="font-size: 24px; text-align: center">Tidify</p>
+<div class="container">
+  @if (itemResource.isLoading()) {
+    <div class="loading">
+      <div class="loader"></div>
     </div>
+  } @else if (item(); as item) {
+    <app-navbar />
 
     <div class="header">
       <h1>{{ item.name | titlecase }}</h1>
     </div>
 
     <div class="grid-container">
-        @for (material of item.materials; track material) {
-          <div class="grid-item" [class.active]="materialDescription === material.description" (click)="selectMaterial(material.name)">
-            <div class="material">
-              <img src="{{ material.impact }}.svg" alt="{{ material.name }}">
-              <h2>{{ material.name }}</h2>
-            </div>
-          </div>
-        }
+      @for (material of item.materials; track material.name) {
+        <button
+          class="grid-item"
+          type="button"
+          [class.active]="selectedMaterial() === material"
+          (click)="selectMaterial(material)"
+        >
+          <img
+            src="icons/impact/{{ material.impact }}.svg"
+            alt="{{ (material.impact + ' impact') | titlecase }}"
+          >
+          <h2>
+            {{ material.name | titlecase }}
+          </h2>
+        </button>
+      }
     </div>
 
     @if (item.valuable) {
@@ -32,36 +38,47 @@
     }
 
     <div class="block">
-        @if (materialDescription) {
-            <h3>
-                Material overview
-            </h3>
-            <p>
-                {{ materialDescription }}
-            </p>
-        }
+      @if (selectedMaterial(); as material) {
+        <h3>
+          Material overview
+        </h3>
+        <p>
+          {{ material.description }}
+        </p>
+      }
 
-        @if (item.reuse.length > 0) {
-          <h3>
-            Reuse
-          </h3>
-          <ul>
-            @for (reuseItem of item.reuse; track reuseItem) {
-              <li>{{ reuseItem | titlecase }}</li>
-            }
-          </ul>
-        }
+      @if (item.reuse.length > 0) {
+        <h3>
+          Reuse
+        </h3>
+        <ul>
+          @for (reuseItem of item.reuse; track reuseItem) {
+            <li>{{ reuseItem | titlecase }}</li>
+          }
+        </ul>
+      }
 
-        @if (item.recycle.length > 0) {
-          <h3>
-            Dispose
-          </h3>
-          <ul>
-            @for (disposeItem of item.recycle; track disposeItem) {
-              <li>{{ disposeItem | titlecase}}</li>
-            }
-          </ul>
-        }
+      @if (item.recycle.length > 0) {
+        <h3>
+          Dispose
+        </h3>
+        <ul>
+          @for (disposeItem of item.recycle; track disposeItem) {
+            <li>{{ disposeItem | titlecase }}</li>
+          }
+        </ul>
+      }
     </div>
-  </div>
-}
+  } @else {
+    <app-navbar />
+
+    <div class="header">
+      <h1>Something went wrong</h1>
+      <p class="error">Could not get overview for "{{ itemName() }}". Please try again.</p>
+    </div>
+
+    <button class="button" type="button" (click)="itemResource.reload()">
+      Try again
+    </button>
+  }
+</div>

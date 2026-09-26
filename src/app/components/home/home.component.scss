@@ -1,26 +1,13 @@
-:host {
-  color: white;
-}
-
 .header {
+  h1 {
+    font-size: 24px;
+  }
+
   p {
     font-size: 20px;
     padding-top: 8px;
     padding-bottom: 32px;
   }
-}
-
-.page {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: #028661;
-  padding: 16px;
-  padding-top: 24px;
-}
-
-h1 {
-  font-size: 24px;
 }
 
 .or {
@@ -29,76 +16,48 @@ h1 {
   text-align: center;
 }
 
-.photo-block,
-.text-block {
+.block {
   width: 100%;
-}
-
-.button-container {
   display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.intro-button {
-  padding: 12px 24px;
-  margin: 8px 0;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background-color: #ffffff;
-  color: #34C759;
-  transition: background-color 0.3s ease;
-  width: calc(100% - 16px);
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
 }
 
 .photo-block {
-  padding: 8px 0;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  align-items: center;
   height: 30%;
+  min-height: 180px;
 }
 
-#object-description {
+.text-input {
   width: calc(100% - 16px);
   margin: 8px;
   padding: 0 16px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: none;
   font-size: 16px;
-  color: #028661;
+  font-family: inherit;
+  color: var(--color-primary);
 }
 
 .input {
-  align-content: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  border-radius: 8px;
 }
 
 .image {
   height: 48px;
-  color: beige;
 }
 
 .description {
   font-size: 16px;
-  margin: 4px 4px;
+  margin: 4px;
   width: 100%;
   padding: 0 8px;
-}
-
-.text-block {
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  align-items: center;
-  padding: 8px 0;
 }
